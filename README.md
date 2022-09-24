@@ -1,2 +1,2 @@
 # Paradigma Lógico
- Trabalho da disciplina de Paradigmas de Linguagens de Programação 
+ Trabalho de Prolog da disciplina de Paradigmas de Linguagens de Programação 
