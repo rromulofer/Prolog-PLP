@@ -13,14 +13,20 @@
 pessoa(ale).       %           Alexandra
 pessoa(babe).      %           Barbara
 pessoa(rosa).
+pessoa(tati).
+pessoa(luisa).
+
 cor(azul).
 cor(amarelo).
+cor(verde).
 cor(vermelho).
 cor(lilaz).
-cor(verde).
+cor(laranja).
+cor(preto).
+cor(roxo).
 
 % este pedaço é importante...pois....está
-% dito no problema  e defineuma cor paracada  menina
+% dito no problema  e define uma cor paracada  menina
 
 
 tem_uma_cor(babe,amarelo).
@@ -28,9 +34,20 @@ tem_uma_cor(rosa,verde).
 tem_uma_cor(ale,azul).
 
 %% aqui  pode-se ampliar as restrições
+nao_pode_vestir(babe,azul).
+nao_pode_vestir(babe,vermelho).
+nao_pode_vestir(babe,lilaz).
 nao_pode_vestir(babe,verde).
+
 nao_pode_vestir(rosa,azul).
 nao_pode_vestir(rosa,lilaz).
+nao_pode_vestir(rosa,amarelo).
+nao_pode_vestir(rosa,vermelho).
+
+nao_pode_vestir(ale,amarelo).
+nao_pode_vestir(ale,vermelho).
+nao_pode_vestir(ale,lilaz).
+nao_pode_vestir(ale,verde).
 
 veste(X, Cor1, Cor2):- pessoa(X), cor(Cor1), cor(Cor2), tem_uma_cor(X,Cor1),
       \+(nao_pode_vestir(X,Cor2)),                /* é um fato que deve ser negado */

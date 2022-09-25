@@ -3,7 +3,7 @@
 % Prof. Ausberto S. Castro Vera
 % Disciplina : Paradigmas de Ling. de Programacao
 % UENF-CCT-LCMAT-CC
-% Date: setembro 2022
+% Date: 25 setembro 2022
 % Aluno: Rômulo Souza Fernandes
 %-------------------------------------------------
 
@@ -13,6 +13,7 @@
 pessoa(ale).       %           Alexandra
 pessoa(babe).      %           Barbara
 pessoa(rosa).
+
 cor(azul).
 cor(amarelo).
 cor(vermelho).
@@ -20,7 +21,7 @@ cor(lilaz).
 cor(verde).
 
 % este pedaço é importante...pois....está
-% dito no problema  e defineuma cor paracada  menina
+% dito no problema  e define uma cor paracada  menina
 
 
 tem_uma_cor(babe,amarelo).
@@ -29,8 +30,11 @@ tem_uma_cor(ale,azul).
 
 %% aqui  pode-se ampliar as restrições
 nao_pode_vestir(babe,verde).
+
 nao_pode_vestir(rosa,azul).
 nao_pode_vestir(rosa,lilaz).
+nao_pode_vestir(rosa,amarelo).
+nao_pode_vestir(rosa,vermelho).
 
 veste(X, Cor1, Cor2):- pessoa(X), cor(Cor1), cor(Cor2), tem_uma_cor(X,Cor1),
       \+(nao_pode_vestir(X,Cor2)),                /* é um fato que deve ser negado */
