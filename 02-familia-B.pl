@@ -36,9 +36,9 @@
     filha(F,M):-mulher(F),mae(M,F).
 
 % Completar as regras:
-    irma(X,Y) :-mulher(X),
-    irmao(A,B) :-
+    irma(X,Y) :- progenitor(A,X), progenitor(A,Y),not(X=Y),mulher(X).
+    irmao(X,Y) :-progenitor(A,X), progenitor(A,Y),not(X=Y),homem(X).
 
-    prima(A,B) :-
-    tia(A,B) :-
+    prima(A,B) :- progenitor(T,X),progenitor(T,Y),progenitor(X,A),progenitor(Y,B),mulher(A).
+    tia(A,B) :- progenitor(K,T),progenitor(K,A),progenitor(T,B),mulher(A).
     
