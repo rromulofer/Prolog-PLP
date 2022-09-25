@@ -3,8 +3,8 @@
 % Prof. Ausberto S. Castro Vera
 % Disciplina : Paradigmas de Ling. de Programacao
 % UENF-CCT-LCMAT-CC
-% Date: setembro 2022
-% Aluno: Fulano  da Silva
+% Date: 25 setembro 2022
+% Aluno: Rômulo Souza Fernandes
 %-------------------------------------------------
  % FATOS
 
@@ -36,7 +36,7 @@
     filha(F,M):-mulher(F),mae(M,F).
 
 % Completar as regras:
-    irma(X,Y) :-
+    irma(X,Y) :-mulher(X),
     irmao(A,B) :-
 
     prima(A,B) :-

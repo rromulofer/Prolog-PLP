@@ -33,5 +33,4 @@
     
     filha(F,P):-mulher(F),pai(P,F).
     filha(F,M):-mulher(F),mae(M,F).
-    
 
