@@ -5,9 +5,6 @@
 % UENF-CCT-LCMAT-CC
 % Date: 25 setembro de 2022
 % Aluno: Rômulo Souza Fernandes
-%-------------------------------------------------
-%    Ver mapa da casa
-%
 %------------- FATOS  -----------------------
 dono(bento,jandira).
 dono(tereza,jade).
