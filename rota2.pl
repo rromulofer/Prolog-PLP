@@ -3,7 +3,7 @@
 % Prof. Ausberto S. Castro Vera
 % Disciplina : Paradigmas de Ling. de Programacao
 % UENF-CCT-LCMAT-CC
-% Date: 25 setembro 2022
+% Date: 26 setembro 2022
 % Aluno: Rômulo Souza Fernandes
 %-------------------------------------------------
 
@@ -17,6 +17,10 @@ edge(2,5).
 edge(3,4).
 edge(3,5).
 edge(4,5).
+edge(4,7).
+edge(4,6).
+edge(5,8).
+edge(5,6).
 
 connected(X,Y) :- edge(X,Y) ; edge(Y,X).
 
