@@ -15,6 +15,7 @@ pessoa(babe).      %           Barbara
 pessoa(rosa).
 pessoa(tati).
 pessoa(luisa).
+pessoa(maria).
 
 cor(azul).
 cor(amarelo).
