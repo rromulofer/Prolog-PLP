@@ -1,9 +1,9 @@
-%     Arquivo: veste.pl
+%Arquivo: veste.pl
 %
 % Prof. Ausberto S. Castro Vera
 % Disciplina : Paradigmas de Ling. de Programacao
 % UENF-CCT-LCMAT-CC
-% Date: 25 setembro 2022
+% Date: 26 setembro 2022
 % Aluno: Rômulo Souza Fernandes
 %-------------------------------------------------
 
@@ -33,6 +33,10 @@ cor(roxo).
 tem_uma_cor(babe,amarelo).
 tem_uma_cor(rosa,verde).
 tem_uma_cor(ale,azul).
+tem_uma_cor(tati,laranja).
+tem_uma_cor(luisa,preto).
+tem_uma_cor(maria,roxo).
+
 
 %% aqui  pode-se ampliar as restrições
 nao_pode_vestir(babe,azul).
@@ -50,13 +54,28 @@ nao_pode_vestir(ale,vermelho).
 nao_pode_vestir(ale,lilaz).
 nao_pode_vestir(ale,verde).
 
+nao_pode_vestir(tati,preto).
+nao_pode_vestir(tati,roxo).
+nao_pode_vestir(tati,verde).
+nao_pode_vestir(tati,azul).
+
+nao_pode_vestir(luisa,roxo).
+nao_pode_vestir(luisa,amarelo).
+nao_pode_vestir(luisa,verde).
+nao_pode_vestir(luisa,azul).
+
+nao_pode_vestir(maria,preto).
+nao_pode_vestir(maria,verde).
+nao_pode_vestir(maria,amarelo).
+nao_pode_vestir(maria,laranja).
+
 veste(X, Cor1, Cor2):- pessoa(X), cor(Cor1), cor(Cor2), tem_uma_cor(X,Cor1),
       \+(nao_pode_vestir(X,Cor2)),                /* é um fato que deve ser negado */
       Cor1 \== Cor2 ,                             /*C1 diferente de C2 */
       /* não  pode ter amarelo e  vermelho com  C1  e  C2  e  vice-versa           */
       \+(
          ((Cor1  = vermelho), /*C1 tem  que ser diferente de Vermelho           */
-         (Cor2   = amarelo))                                                       /* idem para   amarelo....  */
+         (Cor2   = amarelo))                                                    /* idem para   amarelo....  */
 ;                                                                                                                                                                                                                                                             /*                      ;           ou           */
          ((Cor1 =  amarelo) ,                      /*,e ... ocontrário  */
          (Cor2  =  vermelho))
