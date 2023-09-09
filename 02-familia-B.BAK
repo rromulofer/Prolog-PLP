@@ -8,7 +8,7 @@
 %-------------------------------------------------
  % FATOS
  
-   mulher(luisa).
+    mulher(luisa).
     mulher(eva).
     mulher(martha).
     mulher(maria).
@@ -37,6 +37,7 @@
     filha(luisa,adam).
     filha(suzana,martha).
 
+    ?- tem_filho(_):-progenitor(_,_).
     filho(F,P):-homem(F),pai(P,F).
     filho(F,M):-homem(F),mae(M,F).
 
